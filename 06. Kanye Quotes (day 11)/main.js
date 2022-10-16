@@ -16,3 +16,5 @@ function getQuote(){
         list.appendChild(newListItem)
     }
 }
+
+console.dir(textField)

@@ -1,0 +1,43 @@
+
+.board {
+    width: 1920px;
+    height: 1231px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+
+.slot {
+    width: 19.2%;
+    height: 32%;
+    gap: 1%;
+    border: 1px solid black;
+}
+
+
+.test-container {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.button {
+    font-size: 36px;
+    width: 50px;
+    order: 5;
+    text-align: center;
+}
+
+#tile {
+    max-width: 300px;
+    padding-top: 50px;
+}
+
+#score {
+    font-size: 48px;
+}

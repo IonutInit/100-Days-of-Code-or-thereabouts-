@@ -1,0 +1,457 @@
+[
+    {
+      "Slot": 1,
+      "Rank": 51,
+      "Country": "Thailand"
+    },
+    {
+      "Slot": 2,
+      "Rank": 52,
+      "Country": "Spain"
+    },
+    {
+      "Slot": 3,
+      "Rank": 53,
+      "Country": "Turkmenistan"
+    },
+    {
+      "Slot": 4,
+      "Rank": 54,
+      "Country": "Cameroon"
+    },
+    {
+      "Slot": 5,
+      "Rank": 55,
+      "Country": "Papua New Guinea"
+    },
+    {
+      "Slot": 6,
+      "Rank": 56,
+      "Country": "Sweden"
+    },
+    {
+      "Slot": 7,
+      "Rank": 57,
+      "Country": "Uzbekistan"
+    },
+    {
+      "Slot": 8,
+      "Rank": 58,
+      "Country": "Morocco"
+    },
+    {
+      "Slot": 9,
+      "Rank": 59,
+      "Country": "Iraq"
+    },
+    {
+      "Slot": 10,
+      "Rank": 60,
+      "Country": "Paraguay"
+    },
+    {
+      "Slot": 11,
+      "Rank": 61,
+      "Country": "Zimbabwe"
+    },
+    {
+      "Slot": 12,
+      "Rank": 62,
+      "Country": "Japan"
+    },
+    {
+      "Slot": 13,
+      "Rank": 63,
+      "Country": "Germany"
+    },
+    {
+      "Slot": 14,
+      "Rank": 64,
+      "Country": "Congo"
+    },
+    {
+      "Slot": 15,
+      "Rank": 65,
+      "Country": "Finland"
+    },
+    {
+      "Slot": 16,
+      "Rank": 66,
+      "Country": "Vietnam"
+    },
+    {
+      "Slot": 17,
+      "Rank": 67,
+      "Country": "Malaysia"
+    },
+    {
+      "Slot": 18,
+      "Rank": 68,
+      "Country": "Norway"
+    },
+    {
+      "Slot": 19,
+      "Rank": 69,
+      "Country": "Ivory Coast"
+    },
+    {
+      "Slot": 20,
+      "Rank": 70,
+      "Country": "Poland"
+    },
+    {
+      "Slot": 21,
+      "Rank": 71,
+      "Country": "Oman"
+    },
+    {
+      "Slot": 22,
+      "Rank": 72,
+      "Country": "Italy"
+    },
+    {
+      "Slot": 23,
+      "Rank": 73,
+      "Country": "Philippines"
+    },
+    {
+      "Slot": 24,
+      "Rank": 74,
+      "Country": "Ecuador"
+    },
+    {
+      "Slot": 25,
+      "Rank": 75,
+      "Country": "Burkina Faso"
+    },
+    {
+      "Slot": 26,
+      "Rank": 76,
+      "Country": "New Zealand"
+    },
+    {
+      "Slot": 27,
+      "Rank": 77,
+      "Country": "Gabon"
+    },
+    {
+      "Slot": 28,
+      "Rank": 78,
+      "Country": "Guinea"
+    },
+    {
+      "Slot": 29,
+      "Rank": 79,
+      "Country": "United Kingdom"
+    },
+    {
+      "Slot": 30,
+      "Rank": 80,
+      "Country": "Uganda"
+    },
+    {
+      "Slot": 31,
+      "Rank": 81,
+      "Country": "Ghana"
+    },
+    {
+      "Slot": 32,
+      "Rank": 82,
+      "Country": "Romania"
+    },
+    {
+      "Slot": 33,
+      "Rank": 83,
+      "Country": "Laos"
+    },
+    {
+      "Slot": 34,
+      "Rank": 84,
+      "Country": "Guyana"
+    },
+    {
+      "Slot": 35,
+      "Rank": 85,
+      "Country": "Belarus"
+    },
+    {
+      "Slot": 36,
+      "Rank": 86,
+      "Country": "Kyrgyzstan"
+    },
+    {
+      "Slot": 37,
+      "Rank": 87,
+      "Country": "Senegal"
+    },
+    {
+      "Slot": 38,
+      "Rank": 88,
+      "Country": "Syria"
+    },
+    {
+      "Slot": 39,
+      "Rank": 89,
+      "Country": "Cambodia"
+    },
+    {
+      "Slot": 40,
+      "Rank": 90,
+      "Country": "Uruguay"
+    },
+    {
+      "Slot": 41,
+      "Rank": 91,
+      "Country": "Suriname"
+    },
+    {
+      "Slot": 42,
+      "Rank": 92,
+      "Country": "Tunisia"
+    },
+    {
+      "Slot": 43,
+      "Rank": 93,
+      "Country": "Bangladesh"
+    },
+    {
+      "Slot": 44,
+      "Rank": 94,
+      "Country": "Nepal"
+    },
+    {
+      "Slot": 45,
+      "Rank": 95,
+      "Country": "Tajikistan"
+    },
+    {
+      "Slot": 46,
+      "Rank": 96,
+      "Country": "Greece"
+    },
+    {
+      "Slot": 47,
+      "Rank": 97,
+      "Country": "Nicaragua"
+    },
+    {
+      "Slot": 48,
+      "Rank": 98,
+      "Country": "North Korea"
+    },
+    {
+      "Slot": 49,
+      "Rank": 99,
+      "Country": "Malawi"
+    },
+    {
+      "Slot": 50,
+      "Rank": 100,
+      "Country": "Eritrea"
+    },
+    {
+      "Slot": 51,
+      "Rank": 101,
+      "Country": "Benin"
+    },
+    {
+      "Slot": 52,
+      "Rank": 10,
+      "Country": "Algeria"
+    },
+    {
+      "Slot": 53,
+      "Rank": 11,
+      "Country": "DR Congo"
+    },
+    {
+      "Slot": 54,
+      "Rank": 12,
+      "Country": "Saudi Arabia"
+    },
+    {
+      "Slot": 55,
+      "Rank": 13,
+      "Country": "Mexico"
+    },
+    {
+      "Slot": 56,
+      "Rank": 14,
+      "Country": "Indonesia"
+    },
+    {
+      "Slot": 57,
+      "Rank": 15,
+      "Country": "Sudan"
+    },
+    {
+      "Slot": 58,
+      "Rank": 16,
+      "Country": "Libya"
+    },
+    {
+      "Slot": 59,
+      "Rank": 17,
+      "Country": "Iran"
+    },
+    {
+      "Slot": 60,
+      "Rank": 18,
+      "Country": "Mongolia"
+    },
+    {
+      "Slot": 61,
+      "Rank": 19,
+      "Country": "Peru"
+    },
+    {
+      "Slot": 62,
+      "Rank": 20,
+      "Country": "Chad"
+    },
+    {
+      "Slot": 63,
+      "Rank": 21,
+      "Country": "Niger"
+    },
+    {
+      "Slot": 64,
+      "Rank": 22,
+      "Country": "Angola"
+    },
+    {
+      "Slot": 65,
+      "Rank": 23,
+      "Country": "Mali"
+    },
+    {
+      "Slot": 66,
+      "Rank": 24,
+      "Country": "South Africa"
+    },
+    {
+      "Slot": 67,
+      "Rank": 25,
+      "Country": "Colombia"
+    },
+    {
+      "Slot": 68,
+      "Rank": 26,
+      "Country": "Ethiopia"
+    },
+    {
+      "Slot": 69,
+      "Rank": 27,
+      "Country": "Bolivia"
+    },
+    {
+      "Slot": 70,
+      "Rank": 28,
+      "Country": "Mauritania"
+    },
+    {
+      "Slot": 71,
+      "Rank": 29,
+      "Country": "Egypt"
+    },
+    {
+      "Slot": 72,
+      "Rank": 30,
+      "Country": "Tanzania"
+    },
+    {
+      "Slot": 73,
+      "Rank": 31,
+      "Country": "Nigeria"
+    },
+    {
+      "Slot": 74,
+      "Rank": 32,
+      "Country": "Venezuela"
+    },
+    {
+      "Slot": 75,
+      "Rank": 33,
+      "Country": "Pakistan"
+    },
+    {
+      "Slot": 76,
+      "Rank": 34,
+      "Country": "Namibia"
+    },
+    {
+      "Slot": 77,
+      "Rank": 35,
+      "Country": "Mozambique"
+    },
+    {
+      "Slot": 78,
+      "Rank": 36,
+      "Country": "Turkey"
+    },
+    {
+      "Slot": 79,
+      "Rank": 37,
+      "Country": "Chile"
+    },
+    {
+      "Slot": 80,
+      "Rank": 38,
+      "Country": "Zambia"
+    },
+    {
+      "Slot": 81,
+      "Rank": 39,
+      "Country": "Myanmar"
+    },
+    {
+      "Slot": 82,
+      "Rank": 40,
+      "Country": "Afghanistan"
+    },
+    {
+      "Slot": 83,
+      "Rank": 41,
+      "Country": "South Sudan"
+    },
+    {
+      "Slot": 84,
+      "Rank": 42,
+      "Country": "France"
+    },
+    {
+      "Slot": 85,
+      "Rank": 43,
+      "Country": "Somalia"
+    },
+    {
+      "Slot": 86,
+      "Rank": 44,
+      "Country": "Central African Republic"
+    },
+    {
+      "Slot": 87,
+      "Rank": 45,
+      "Country": "Ukraine"
+    },
+    {
+      "Slot": 88,
+      "Rank": 46,
+      "Country": "Madagascar"
+    },
+    {
+      "Slot": 89,
+      "Rank": 47,
+      "Country": "Botswana"
+    },
+    {
+      "Slot": 90,
+      "Rank": 48,
+      "Country": "Kenya"
+    },
+    {
+      "Slot": 91,
+      "Rank": 49,
+      "Country": "Yemen"
+    }
+   ]

@@ -552,7 +552,8 @@ let countries = [
 
 
 
-const tile = document.querySelector("#tile")
+const tile = document.querySelector("#tile");
+const result = document.querySelector("#result");
 
 let randNum = Math.floor(Math.random()*countries.length);
 let score = 5;
@@ -562,6 +563,7 @@ let style = "harder"
 // console.log(countries[randNum].Slot)
 
 function showTiles() {
+  randNum = Math.floor(Math.random()*countries.length);
   if(style == "hard") {
   tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`;
 } else if (style == "harder") {
@@ -604,15 +606,17 @@ function playgame() {document.querySelectorAll('.button').forEach(item => {
         if (countries[randNum].Slot.includes(item.textContent)) {
             score++;
             scoreText.textContent = score;
-            console.log(item.textContent);
-            randNum = Math.floor(Math.random()*countries.length);
+            result.textContent = "Correct!"
+            //console.log(item.textContent);
+            //randNum = Math.floor(Math.random()*countries.length);
             showTiles()
             // tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`;            
         } else {
             score--;
             scoreText.textContent = score;
-            console.log(item.textContent);
-            randNum = Math.floor(Math.random()*countries.length);
+            //console.log(item.textContent);
+            //randNum = Math.floor(Math.random()*countries.length);
+            result.textContent = `Wrong. It's tile ${countries[randNum].Slot}`
             showTiles()
             // tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`;
         }

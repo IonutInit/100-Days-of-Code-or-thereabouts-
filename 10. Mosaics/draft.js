@@ -554,22 +554,25 @@ let countries = [
 
 const tile = document.querySelector("#tile");
 const result = document.querySelector("#result");
+const left = document.querySelector("#left");
+
 
 let randNum = Math.floor(Math.random()*countries.length);
 let score = 5;
-let style = "harder"
+let style = "hard"
 
 // console.log(randNum)
 // console.log(countries[randNum].Slot)
 
-function showTiles() {
-  randNum = Math.floor(Math.random()*countries.length);
-  if(style == "hard") {
-  tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`;
-} else if (style == "harder") {
-  tile.src = `assets/tiles_harder/Tiles2_${randNum + 1}.svg`;
-}
-}
+// function showTiles() {
+//     randNum = Math.floor(Math.random()*countries.length);
+//     console.log(randNum)  
+//   if(style == "hard") {    
+//     tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`;
+//       } else if (style == "harder") {
+//       tile.src = `assets/tiles_harder/Tiles2_${randNum + 1}.svg`;
+//     }
+// }
 
 
 
@@ -580,6 +583,8 @@ const scoreText = document.querySelector("#score");
 scoreText.textContent = score;
 
 
+console.log(randNum)
+tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`
 // //Version with a single slot option
 // function playgame() {document.querySelectorAll('.button').forEach(item => {
 //     item.addEventListener('click', event => {        
@@ -599,34 +604,49 @@ scoreText.textContent = score;
 //     })
 //   })}
 
-showTiles()
+// showTiles()
 
 function playgame() {document.querySelectorAll('.button').forEach(item => {
     item.addEventListener('click', event => {        
         if (countries[randNum].Slot.includes(item.textContent)) {
             score++;
             scoreText.textContent = score;
-            result.textContent = "Correct!"
-            //console.log(item.textContent);
-            //randNum = Math.floor(Math.random()*countries.length);
-            showTiles()
-            // tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`;            
+            result.textContent = "Correct!";
+            countries[randNum].status = "Used"; 
+            countries = countries.filter(countries => countries.status == "Available");                       
+            // showTiles();  
+            randNum = Math.floor(Math.random()*countries.length);
+            console.log(randNum)
+            tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`
         } else {
             score--;
             scoreText.textContent = score;
-            //console.log(item.textContent);
-            //randNum = Math.floor(Math.random()*countries.length);
-            result.textContent = `Wrong. It's tile ${countries[randNum].Slot}`
-            showTiles()
-            // tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`;
+            result.textContent = `Wrong. It's tile ${countries[randNum].Slot}.`;
+            countries[randNum].status = "Used";
+            countries = countries.filter(countries => countries.status == "Available"); 
+            randNum = Math.floor(Math.random()*countries.length);
+            console.log(randNum)
+            tile.src = `assets/tiles_hard/Tiles1_${randNum + 1}.svg`
+            // showTiles();
         }
+        left.textContent = `${countries.length} countries to go.`;
+        
     })
   })}
 
 
-  if(score > 0) {    
-    playgame();
-  } 
+  function gameOn() {
+    for (i = 0; i < countries.length; i++) {
+      countries[i].status = "Available"
+    }
+    if (score > 0) {
+      playgame()
+    }
+    
+  }
+  
+  
+gameOn()
 
 // while (score > 0) {
 //   playgame()

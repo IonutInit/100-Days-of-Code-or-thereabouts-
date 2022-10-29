@@ -241,7 +241,7 @@ let countries = [
     },
     {
       "Tile": 41,
-      "Slot": "12",
+      "Slot": "7",
       "Rank": 91,
       "Country": "Suriname"
     },
@@ -557,15 +557,32 @@ let scoreText = document.querySelector("#score");
 const left = document.querySelector("#left");
 scoreText.textContent = score;
 
-function play() {    
+let difficulty = document.querySelector('#difficulty');
+let difLevel = 1;
 
+difficulty.addEventListener("click", event => {
+  if(difficulty.value == 'Hard') {
+    difLevel = 1;
+  } else {
+    difLevel = 2;
+  }
+})
+
+
+function play() { 
     let randNum = Math.floor(Math.random()*countries.length) + 1;
-    tile.src = `assets/tiles_hard/Tiles1_${countries[randNum].Tile}.svg`;
+    tile.src = `assets/tiles/Tiles${difLevel}_${countries[randNum].Tile}.svg`;
     console.log(randNum)
-    console.log(countries[randNum])
+    console.log(countries[randNum])    
 
-    document.querySelectorAll('.button').forEach(button => {
+  
+          document.querySelectorAll('.button').forEach(button => {
         button.addEventListener("click", event => {
+          if(score == 0) {
+            result.textContent = "Sorry, your score is 0."
+          } else if(score > 0 && countries.length < 1) {
+            result.textContent = "Congratulations! You won!"
+          } else {
             if(countries[randNum].Slot.includes(button.textContent)) {
                 score++;
                 scoreText.textContent = score;
@@ -573,7 +590,7 @@ function play() {
                 countries[randNum].Status = "played";
                 countries = countries.filter(countries => countries.Status != "played");
                 randNum = Math.floor(Math.random()*countries.length) + 1;
-                tile.src = `assets/tiles_hard/Tiles1_${countries[randNum].Tile}.svg`;
+                tile.src = `assets/tiles/Tiles${difLevel}_${countries[randNum].Tile}.svg`;
                 left.textContent = `${countries.length} countries left.`
                 console.log(randNum)
                 console.log(countries[randNum])
@@ -584,14 +601,19 @@ function play() {
                 countries[randNum].Status = "played";
                 countries = countries.filter(countries => countries.Status != "played");
                 randNum = Math.floor(Math.random()*countries.length) + 1;
-                tile.src = `assets/tiles_hard/Tiles1_${countries[randNum].Tile}.svg`;
+                tile.src = `assets/tiles/Tiles${difLevel}_${countries[randNum].Tile}.svg`;
                 left.textContent = `${countries.length} countries left.`
                 console.log(randNum)                
                 console.log(countries[randNum])
             }
-        })
-        
+          }})
+      
     })
-}
+    }
+     
+
+
+
+
 
 play()

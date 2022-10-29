@@ -1,43 +1,320 @@
-
-.board {
-    width: 1920px;
-    height: 1231px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 5%;
+@font-face {
+    font-family: Geographica;
+    src: url(./assets/fonts/Geographica.otf);
+    font-family: GeographicaHand;
+    src: url(./assets/fonts/GeographicaHand.otf);
 }
 
-
-.slot {
-    width: 19.2%;
-    height: 32%;
-    gap: 1%;
-    border: 1px solid black;
+#map-area {
+    margin: auto;
+    padding-top: 30px;
 }
 
-
-.test-container {
-    width: 300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
+h1 {
+    text-align: center;
+    font-size: 64px;
+    color: #3D626F;
+    letter-spacing: 15px;
+    margin-bottom: -5px;
+    /* margin-top: -5px; */
 }
 
-.button {
-    font-size: 36px;
-    width: 50px;
-    order: 5;
+#header-line {
+    height: 6px;
+    background-color: #3D626F;
+}
+
+#description {
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#board {
+    margin: auto;
+    height: 819px;
+    width: 1280px;
+    background: url("assets/board.jpg");
+    background-size: 1280px 819px;
+}
+
+* {
+    font-family: Geographica;
+}
+
+body {
+    background-image: url("assets/background.svg");
+    background-color: #F3F3F3;
+}
+
+.map-area {
+    display: grid;
+    grid-template-columns: 163fr 500fr 36fr 500fr 36fr 500fr 35fr 500fr 35fr 500fr 163fr;
+    grid-template-rows: 181fr 500fr 20fr 500fr 20fr 500fr 181fr;
+}
+
+.dashboard {
+    margin: auto;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 30fr 5fr 30fr 5fr 30fr;
+    padding-top: 30px;
+
+}
+
+.footer {
     text-align: center;
 }
 
+#footer {
+    height: 10px;
+    background-color: #3D626F;
+}
+
+/* .score {
+    display: grid;
+    grid-template-rows: 20fr 3fr 80fr;
+} */
+
 #tile {
-    max-width: 300px;
-    padding-top: 50px;
+    grid-column: 3;
+}
+
+.button {
+    opacity: 0;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    font-size: 24px;
+}
+
+#score-separator {
+    height: 3px;
+    width: 70%;
+    background-color: #3D626F;
+    margin-bottom: 10px;
 }
 
 #score {
-    font-size: 48px;
+    font-family: GeographicaHand;
+    font-size: 96px;
+    color: #3D626F;
 }
+
+.options {
+    grid-column: 5;
+    font-size: 24px;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dif-separator {
+    height: 3px;
+    width: 70%;
+    background-color: #3D626F;
+    margin-bottom: 10px;
+}
+
+#difficulty {
+    width: 70%;
+    padding-top: 5px;
+    text-align: center;
+    font-size: large;
+}
+
+
+
+#button1 {
+    grid-column: 2;
+    grid-row: 2;
+    order: 1;
+}
+
+#svg1 {
+    grid-column: 2;
+    grid-row: 2;
+    order: 0;
+}
+
+#button2 {
+    grid-column: 4;
+    grid-row: 2;
+    order: 1;
+}
+
+#svg2 {
+    grid-column: 4;
+    grid-row: 2;
+    order: 0;
+}
+
+#button3 {
+    grid-column: 6;
+    grid-row: 2;
+    order: 1;
+}
+
+#svg3 {
+    grid-column: 6;
+    grid-row: 2;
+    order: 0;
+}
+
+#button4 {
+    grid-column: 8;
+    grid-row: 2;
+    order: 1;
+}
+
+#svg4 {
+    grid-column: 8;
+    grid-row: 2;
+    order: 0;
+}
+
+#button5 {
+    grid-column: 10;
+    grid-row: 2;
+    order: 1;
+}
+
+#svg5 {
+    grid-column: 10;
+    grid-row: 2;
+    order: 0;
+}
+
+#button6 {
+    grid-column: 2;
+    grid-row: 4;
+    order: 1;
+}
+
+#svg6 {
+    grid-column: 2;
+    grid-row: 4;
+    order: 0;
+}
+
+#button7 {
+    grid-column: 4;
+    grid-row: 4;
+    order: 1;
+}
+
+#svg7 {
+    grid-column: 4;
+    grid-row: 4;
+    order: 0;
+}
+
+#button8 {
+    grid-column: 6;
+    grid-row: 4;
+    order: 1;
+}
+
+#svg8 {
+    grid-column: 6;
+    grid-row: 4;
+    order: 0;
+}
+
+#button9 {
+    grid-column: 8;
+    grid-row: 4;
+    order: 1;
+}
+
+#svg9 {
+    grid-column: 8;
+    grid-row: 4;
+    order: 0;
+}
+
+#button10 {
+    grid-column: 10;
+    grid-row: 4;
+    order: 1;
+}
+
+#svg10 {
+    grid-column: 10;
+    grid-row: 4;
+    order: 0;
+}
+
+#button11 {
+    grid-column: 2;
+    grid-row: 6;
+    order: 1;
+}
+
+#svg11 {
+    grid-column: 2;
+    grid-row: 6;
+    order: 0;
+}
+
+#button12 {
+    grid-column: 4;
+    grid-row: 6;
+    order: 1;
+}
+
+#svg12 {
+    grid-column: 4;
+    grid-row: 6;
+    order: 0;
+}
+
+#button13 {
+    grid-column: 6;
+    grid-row: 6;
+    order: 1;
+}
+
+#svg13 {
+    grid-column: 6;
+    grid-row: 6;
+    order: 0;
+}
+
+#button14 {
+    grid-column: 8;
+    grid-row: 6;
+    order: 1;
+}
+
+#svg14 {
+    grid-column: 8;
+    grid-row: 6;
+    order: 0;
+}
+
+#button15 {
+    grid-column: 10;
+    grid-row: 6;
+    order: 1;
+}
+
+#svg15 {
+    grid-column: 10;
+    grid-row: 6;
+    order: 0;
+}
+
+
+
+
+
+
+
+

@@ -9,33 +9,93 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+    <h1>MOSAICS</h1>
+    <div id="header-line"></div>
+    <p id="description">Match all country tiles to their position on the World map while keeping a positive score. </p>
+    <div id="map-area">
+        <div class="map-area" id="board">
+            <button class="button" id="button1">1</button>
+            <img src="assets/buttons/button01.svg" class="svg" id="svg1">
 
-    <div class="test-container">
-    <button class="button" id="button1">1</button>
-    <button class="button">2</button>
-    <button class="button">3</button>
-    <button class="button">4</button>
-    <button class="button">5</button>
-    <button class="button">6</button>
-    <button class="button">7</button>
-    <button class="button">8</button>
-    <button class="button">9</button>
-    <button class="button">10</button>
-    <button class="button">11</button>
-    <button class="button">12</button>
-    <button class="button">13</button>
-    <button class="button">14</button>
-    <button class="button">15</button>
+            <button class="button" id="button2">2</button>
+            <img src="assets/buttons/button02.svg" class="svg" id="svg2">
+
+            <button class="button" id="button3">3</button>
+            <img src="assets/buttons/button03.svg" class="svg" id="svg3">
+
+            <button class="button" id="button4">4</button>
+            <img src="assets/buttons/button04.svg" class="svg" id="svg4">
+
+            <button class="button" id="button5">5</button>
+            <img src="assets/buttons/button05.svg" class="svg" id="svg5">
+
+            <button class="button" id="button6">6</button>
+            <img src="assets/buttons/button06.svg" class="svg" id="svg6">
+
+            <button class="button" id="button7">7</button>
+            <img src="assets/buttons/button07.svg" class="svg" id="svg7">
+
+            <button class="button" id="button8">8</button>
+            <img src="assets/buttons/button08.svg" class="svg" id="svg8">
+
+            <button class="button" id="button9">9</button>
+            <img src="assets/buttons/button09.svg" class="svg" id="svg9">
+
+            <button class="button" id="button10">10</button>
+            <img src="assets/buttons/button10.svg" class="svg" id="svg10">
+
+            <button class="button" id="button11">11</button>
+            <img src="assets/buttons/button11.svg" class="svg" id="svg11">
+
+            <button class="button" id="button12">12</button>
+            <img src="assets/buttons/button12.svg" class="svg" id="svg12">
+
+            <button class="button" id="button13">13</button>
+            <img src="assets/buttons/button13.svg" class="svg" id="svg13">
+
+            <button class="button" id="button14">14</button>
+            <img src="assets/buttons/button14.svg" class="svg" id="svg14">
+
+            <button class="button" id="button15">15</button>
+            <img src="assets/buttons/button15.svg" class="svg" id="svg15">
+        </div>
     </div>
 
-    <img src="assets/tiles_hard/Tiles1_0.svg" id="tile">
+    <div class="dashboard">
+        <div class="score">
+            <p style="letter-spacing: 2px; margin-bottom: -2px;">Score: </p> 
+            <div id="score-separator"></div>   
+            <p id="score"></p>
+        </div>
+        
+        <img id="tile">
 
-    <p>Score: </p>    
-    <p id="score"></p>
-    <p id = "result"></p>
-    <p id = "left"></p>
+        <div class="options">
+            <div class="difficulty">
+                <p style="letter-spacing: 2px; margin-bottom: -2px;">Difficulty</p>
+            <div id="dif-separator"></div>
+            <select id="difficulty">
+                <option value="Hard">Hard</option>
+                <option value="Harder">Harder</option>
+              </select>
+            </div>
+            
+            <div class="result">
+                <p id = "result"></p>
+                <p id = "left"></p>
+            </div>
+            
+        </div>
 
-    <img src="assets/mosaics-presentation_2.jpg" style="width: 700px">
+    </div>
+    
+    <div class="footer">
+        <p>The two dots on the upper right corner shows on which sixtile each country ranks on the <a href="https://www.artifices.xyz/a/meridians-the-bobbest-countries" taget="_blank">Bob Index</a> and the <a href="https://www.artifices.xyz/a/meridians-the-country-mediocrity-index" href="_blank">Mediocrity Index</a>, respectively.  </p>
+        <div id="footer"></div>
+    </div> 
+    
+    
+
 
 </body>
 </html>

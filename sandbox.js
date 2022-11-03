@@ -72,3 +72,46 @@
 //     hoursText = `${hours} hours, `
 // }
 
+
+function getChoice(num) {    
+    // let ranNum1 = Math.floor(Math.random() * num);
+    // let ranNum2 = Math.floor(Math.random() * num);
+
+    // if (ranNum1 == ranNum2) {
+    //     return true
+    // }
+
+    if (Math.floor(Math.random() * num) == Math.floor(Math.random() * num)) {
+        return true;
+    }
+} 
+
+function manyTimes(times, num) {
+    let counter = 0;
+    for (i = 0; i < times; i++) {
+        if(getChoice(num)) {
+            counter++
+        }
+    }
+    return counter;
+}
+console.log(manyTimes(1000, 3))
+
+
+
+function FizzBuzzifier(array) {
+    for (i in array) {
+        if (array[i]%3 == 0) {
+            array[i] = 'Fizz'
+        } else if(array[i]%5 == 0)
+             {
+            array[i] = 'Buzz' 
+            }
+        else if (array[i]%3 == 0 && array[i]%5 == 0) {
+            array[i] = 'FizzBuzz'
+        }
+    }
+    return array
+}
+
+// console.log(FizzBuzzifier([1,2,3,4,5,6,7,8,13,12,15]))

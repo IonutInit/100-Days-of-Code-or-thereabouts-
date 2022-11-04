@@ -1,0 +1,1 @@
+Some Codewars katas from the past week or so, both real and invented :)

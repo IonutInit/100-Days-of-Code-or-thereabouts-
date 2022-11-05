@@ -1,0 +1,24 @@
+{
+  "name": "15.-the-path-of-riddles-(days-40--)",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r dotenv/config server.js",
+    "dev": "nodemon -r dotenv/config server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}

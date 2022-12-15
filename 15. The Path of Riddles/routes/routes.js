@@ -9,3 +9,4 @@ riddlesRouter.get('/r', async function(req, res) {
         payload: randomRiddle,
     })
 })
+

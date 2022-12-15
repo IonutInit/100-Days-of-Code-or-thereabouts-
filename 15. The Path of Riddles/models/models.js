@@ -7,3 +7,12 @@ export async function getRandomRiddle() {
 
     return riddle;
 }
+
+
+// export async function getRandomRiddle() {
+//     const sqlQuery = 'SELECT id from riddles';
+//     const result = await pool.query(sqlQuery);
+//     const riddle = result.rows;
+
+//     return riddle;
+// }

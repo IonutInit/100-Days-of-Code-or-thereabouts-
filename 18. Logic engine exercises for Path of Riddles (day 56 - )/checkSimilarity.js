@@ -8,6 +8,10 @@ function threshold(a) {
 //the major drawback is that a scrambled word will return a perfect positive
 //however, integrating this with a letter similarity checker may be too much
 function checkSetSimilarity(input, keyword) {
+    input.toLowerCase()
+    if(input === keyword) {
+        return 'Correct'
+    }
     //creating arrays of unique letters
     const setInput = [];
     for (let i of input) {
@@ -40,7 +44,9 @@ function checkSetSimilarity(input, keyword) {
     }  
     
     if (counter >= threshold(keyword.length) && lengthOK == true) {
-        return true;
+        return 'Getting there...';
+    } else {
+        return false
     }
 }
 
@@ -90,6 +96,6 @@ function checkSynonimSimilarity(input, synonyms) {
     }
 }
 
-console.log(checkSetSimilarity('vent', 'vent'))
+console.log(checkSetSimilarity('', 'vent'))
 
 console.log(checkSynonimSimilarity('vent', ['volcano', 'vent']))

@@ -1,0 +1,217 @@
+//defines a theshold for similarity (e.g. 2 letters for a 3 letter word, 3 for 4, 4 for 6)
+function threshold(a) {
+    return (a < 5) ? a - 1 : a - 2;
+}
+
+
+const averageLetter = (word, synonymsString) => {
+    const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    const arr = []
+    for (let i = 0; i < word.length; i++) {
+        for (let j = 0; j < letters.length; j++) {
+            if(word[i] === letters[j]) {
+                arr.push(letters.indexOf(letters[j]) + 1)
+            }
+        }
+    }
+    const averageIndex = Math.round((arr.reduce((a, b) => a + b) - arr.length) / arr.length)
+    const averageLetter = letters[averageIndex].toUpperCase()
+    
+    return `The average letter is ${averageLetter}.`
+}
+
+// console.log(averageLetter('irina'))
+
+const approximateLengthHarder = (word, synonymsString) => {
+    const dif = word.length - threshold(word.length)
+    return `The solution is between ${word.length - dif} and ${word.length+dif} letters long.`
+}
+
+// console.log(approximateLength('hello'))
+
+
+const approximateLengthEasier = (word, synonymsString) => {
+    const dif = word.length - threshold(word.length)
+    return `The solution is between ${word.length - 1} and ${word.length +  1} letters long.`
+}
+
+//console.log(approximateLengthEasier('hello'))
+
+const approximateLengthEasiest = (word, synonymsString) => {
+   return `The solution is ${word.length} letters long.`
+}
+
+//console.log(approximateLengthEasiest('hello'))
+
+
+const randomLetter = (word, synonymsString) => {
+    const rand = Math.floor(Math.random() * word.length)
+    return `One of the letters is ${word[rand].toUpperCase()}.`
+}
+
+// console.log(randomLetter('hello'))
+
+const synonym = (word, synonymsString) => {
+    const synonyms = synonymsString.split(',')
+    const rand = Math.floor(Math.random() * synonyms.length)    
+    return `Another word for it might be ${synonyms[rand].replace(' ', '')}.`
+}
+
+console.log(synonym('hello', 'one, two, three, four'))
+
+const firstLetter = (word, synonymsString) => {
+    return `The first letter of the solution is ${word[0].toUpperCase()}.`
+}
+
+//console.log(firstLetter('hello'))
+
+
+const endLetter = (word, synonymsString) => {
+    return `The solution ends in ${word[word.length - 1].toUpperCase()}.`
+}
+
+//console.log(endLetter('hello'))
+
+
+
+
+let hints = [
+    {
+        call: averageLetter,
+        status: null,
+        points: 0, //how many times has been played this turn
+        limit: 1, //how many times can be played by turn
+        lowerLimit: 1, //it is available each turn within the lower/upper limits of the game
+        upperLimit: 4, 
+        chance: 2, //the chance of it being called out of the summ of all chances 
+    },
+    {
+        call: approximateLengthHarder,
+        status: null,
+        points: 0,
+        limit: 1,
+        lowerLimit: 1,
+        upperLimit: 5, 
+        chance: 2,       
+    },
+    {
+        call: approximateLengthEasier,
+        status: null,
+        points: 0,
+        limit: 1,
+        lowerLimit: 6,
+        upperLimit: 10,
+        chance: 1,       
+    },
+    {
+        call: approximateLengthEasiest,
+        status: null,
+        points: 0,
+        limit: 1,
+        lowerLimit: 11,
+        upperLimit: 200,
+        chance: 1,        
+    },
+    {
+        call: randomLetter,
+        status: null,
+        points: 0,
+        limit: 3,
+        lowerLimit: 1,
+        upperLimit: 200, 
+        chance: 1,       
+    },
+    {
+        call: synonym,
+        status: null,
+        points: 0,
+        limit: 2,
+        lowerLimit: 1,
+        upperLimit: 200,
+        chance: 1,        
+    },
+    {
+        call: endLetter,
+        status: null,
+        points: 0,
+        limit: 1,
+        lowerLimit: 3,
+        upperLimit: 200,
+        chance: 1,        
+    },
+    {
+        call: firstLetter,
+        status: null,
+        points: 0,
+        limit: 1,
+        lowerLimit: 5,
+        upperLimit: 200, 
+        chance: 1,       
+    },
+]
+
+
+let gameStatus = 3
+let result = []
+
+const getHints = (solution, synonymsString) => {
+    
+    // for (let i = 0; i < hints.length; i++) {
+    //     if (hints[i].lowerLimit < gamseStatus && hints[i].upperLimit > gamseStatus) {
+    //         hints[i].status = true;
+    //     }
+    // }
+
+    //filters for optiions that are still within the game play and which haven't been yet called more than they are supposed to 
+    hints.map(x => (x.lowerLimit < gameStatus && x.upperLimit > gameStatus) ? x.status = true : x.status = false)
+
+    for (let i = 0; i < hints.length; i++) {
+        if (hints[i].points >= hints[i].limit) {
+            hints[i].status = false;
+        }
+    }
+
+    // hints.map(x => (x.points >= x.limit) ? x.status = false : x.status = true)
+
+    //creates an array enumerating the viable options each of them times their chance
+    let availableHints = hints.filter(x => x.status === true)
+
+    let options = [];
+
+    for (let i = 0; i < availableHints.length; i++) {
+        for(let j = 0; j < availableHints[i].chance; j++) {
+            options.push(availableHints[i].call)
+        }
+    }
+
+    //one of these instances is being called to provide the hint
+    let rand = Math.floor(Math.random() * options.length)
+    result.push(options[rand](solution, synonymsString))
+
+    //it adds a point for the instance that has been called
+    for (let i = 0; i < availableHints.length; i++) {
+        if(availableHints[i].call.name === options[rand].name) {
+            availableHints[i].points++
+        }
+    }
+
+    //it randomly add one point to the chances of any instance that will still be played after the game reaches 5
+    let upcomingHints = hints.filter(x => x.upperLimit > 5)
+    rand = Math.floor(Math.random() * upcomingHints.length)
+    upcomingHints[rand].chance++
+
+    return hints
+}
+
+
+//ONGOING ISSUES
+//The returned synonyms is not removed from the array of synonyms
+
+
+// getHints('one', 'two, three, four, five')
+// getHints('one', 'two, three, four, five')
+// getHints('one', 'two, three, four, five')
+// console.log(getHints('one', 'two, three, four, five'))
+// console.log(result)
+
+

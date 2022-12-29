@@ -1,7 +1,9 @@
-**THE BOARD AND RULES OD THE PNP GAME**  
+# 10. Mosaics
 
-The digitised version will be a bit different, according to my currenty skill.  
+**THE BOARD AND RULES OD THE PNP GAME**
 
-![Mosaics Board](./assets/mosaics-presentation_2.jpg)  
+The digitised version will be a bit different, according to my currenty skill. Hello.
 
-![Mosaics PnP rules](./assets/mosaics-presentation_1.jpg)
+![Mosaics Board](assets/mosaics-presentation\_2.jpg)
+
+![Mosaics PnP rules](assets/mosaics-presentation\_1.jpg)
